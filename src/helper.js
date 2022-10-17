@@ -7,7 +7,12 @@ const choice = (items) => {
 };
 
 const remove = (items, item) => {
-  return undefined;
+  for (let i = 0; i < items.length; i++) {
+    if (items[i] === item) {
+      console.log(items);
+      return [...items.slice(0, 1), ...items.slice(i + 1)];
+    }
+  }
 };
 
 export { choice, remove };
